@@ -20,7 +20,7 @@ var rootCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		fmt.Printf("%+v", out)
+		kospell.PrintDiff(args[0], out)
 		return nil
 	},
 }
