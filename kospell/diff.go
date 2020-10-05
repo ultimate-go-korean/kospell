@@ -29,6 +29,6 @@ func getCorrectedWord(orig []rune, check GrammarCheck) []rune {
 }
 
 func replaceWordByErrInfo(orig []rune, errInfo GrammarCheckErrInfo) []rune {
-	out := fmt.Sprintf("%s%s%s", string(orig[0:errInfo.Start]), errInfo.CandWord, string(orig[errInfo.End:]))
+	out := fmt.Sprintf("%s{%s}%s", string(orig[0:errInfo.Start]), errInfo.CandWord, string(orig[errInfo.End:]))
 	return []rune(out)
 }
